@@ -8,8 +8,6 @@ export TERMINAL="alacritty"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="nautilus"
-export MPD_HOST="localhost"
-export MPD_PORT="6606"
 
 # less/man colors
 export LESS=-R
