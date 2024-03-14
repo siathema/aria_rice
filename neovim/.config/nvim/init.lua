@@ -1,0 +1,2 @@
+require("semanticsuicide")
+print("hello")

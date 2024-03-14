@@ -1,0 +1,24 @@
+#!/bin/bash
+#BatteryStatus - Matthias Linford
+
+charging="$(cat /sys/class/power_supply/BAT0/status)"
+symbol="🔋"
+case $charging in
+	Charging)
+		symbol="⚡🔋"
+		;;
+esac
+
+percentage=$(cat /sys/class/power_supply/BAT0/capacity)
+
+echo "$symbol $percentage%"
+
+if [ "$percentage" -lt "10" ]
+then
+	echo
+	echo \#FF0000
+	notify-send -u critical -t 2000 "Warning:" "Battery is at $percent%"
+else
+	echo
+	echo \#00FF00
+fi

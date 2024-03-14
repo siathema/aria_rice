@@ -1,0 +1,19 @@
+#!/bin/bash
+#ChangeBrightness - Matthias Linford
+#This script is required because the nvidia modesetting kernel module doesn't
+#work with xbacklight. Additionally /sys/class/backlight/$blDevice/brightness needs write permissions for the user.
+
+blDevice="intel_backlight"
+blPath="/sys/class/backlight/$blDevice"
+
+blCurrentBrightness="$(cat $blPath/brightness)"
+blMaxBrightness="$(cat $blPath/max_brightness)"
+
+blNewBrightness=$(("$1" + "$blCurrentBrightness"))
+
+if [[ "$blNewBrightness" -ge "$blMaxBrightness" || "$blNewBrightness" -le "0" ]]
+then
+	exit
+else
+	echo "$blNewBrightness" > $blPath/brightness
+fi

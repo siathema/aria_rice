@@ -1,0 +1,50 @@
+#Browser Shortcut
+super + shift + b
+ $BROWSER
+ 
+#Terminal
+super + Return 
+ $TERMINAL
+
+#Dmenu run
+super + d
+ dmenu_run
+
+#Volume Controls
+XF86AudioMute
+ pulsemixer --toggle-mute
+
+XF86AudioLowerVolume
+ pulsemixer --change-volume -"5"
+
+XF86AudioRaiseVolume
+ pulsemixer --change-volume +"5"
+
+#Brightness Controls
+XF86MonBrightnessDown
+ changeBrightness "-2400"
+
+XF86MonBrightnessUp
+ changeBrightness "2400"
+
+#Search function
+XF86Search
+ ducksearch
+
+#Toggle wifi
+XF86RFKill
+ toggleWifi
+
+#Screenshot
+Print
+ maim ~/Pictures/$(date +%s).png
+
+#Play/Pause mpd
+XF86AudioPlay
+ mpc toggle
+
+XF86AudioPrev
+ mpc prev
+
+XF86AudioNext
+ mpc next

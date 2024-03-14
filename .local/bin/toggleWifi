@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#This just toggles wifi
+
+if [ -z "$(nmcli radio | grep disabled)" ]
+then
+	nmcli radio all off 
+else
+	nmcli radio all on 
+fi

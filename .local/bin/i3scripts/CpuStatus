@@ -1,0 +1,4 @@
+#!/bin/bash
+# CpuStatus - Matthias Linford
+
+echo "$(sensors | grep "Package id 0:" | cut -b 15-25)"

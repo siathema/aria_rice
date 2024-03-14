@@ -1,0 +1,10 @@
+#!/bin/sh
+
+unclutter &					#Remove cursor when idle
+xwallpaper --zoom ~/.config/background.jpg&	#Wallpaper
+xcompmgr & 					#For transparency
+sxhkd &						#KeyBindings
+dunst &						#notications
+#Turn Caps into super/esc
+setxkbmap -option caps:super && killall xcape 2>/dev/null; xcape -e 'Super_L=Escape' &
+
