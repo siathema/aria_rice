@@ -4,8 +4,8 @@ set $mod Mod4
 set $term --no-startup-id $TERMINAL
 font pango:NotoSansMono 8
 
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 5
 default_border pixel 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position

@@ -3,6 +3,9 @@
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 #xrandr --auto
 #xrandr --dpi 141.2
+xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary
+xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --right-of DP-0
+#xrandr --output DVI-D-0 --mode 1920x1080 --rate 60 --left-of DP-0
 
 #Loads user nvidia settings
 
